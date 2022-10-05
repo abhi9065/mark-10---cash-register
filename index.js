@@ -2,17 +2,16 @@ const billAmount = document.querySelector("#bill-amount");
 const cashGiven = document.querySelector("#cash-given");
 const checkButton = document.querySelector("#check-button");
 const message =  document.querySelector("#error-message");
-const noOfNotes = document.querySelectorAll(".no-of-notes")
+const noOfNotes = document.querySelector(".no-of-notes")
 
-const availabelNotes = [2000,500,100,20,10,5,1]
+const availabelNotes = [2000, 500, 100, 20, 10, 5, 1];
 
 checkButton.addEventListener('click',function validateBillAndCashAmount(){
-  
   hideMessage();
     if (billAmount.value > 0){
-        if (cashGiven.value > billAmount.value){
-           const amountToBeReturn = cashGiven.value - billAmount.value;
-           calculateChange(amountToBeReturn);
+        if (cashGiven.value > billAmount.value) {
+           const amountToBeReturned = cashGiven.value - billAmount.value;
+           calculateChange(amountToBeReturned);
         }else {
 
             showMessage("do you wanna wash plates?");
@@ -21,15 +20,15 @@ checkButton.addEventListener('click',function validateBillAndCashAmount(){
     }else{
        
         showMessage("invalid bill Amount");    }
-})
+});
 
 
-function calculateChange(amountToBeReturn){
+function calculateChange(amountToBeReturned){
 
     for (i = 0; i < availabelNotes.length; i++){
-    const numberOfNotes = Math.trunc(amountToBeReturn / availabelNotes[i]);
+    const numberOfNotes = Math.trunc(amountToBeReturned / availabelNotes[i]);
 
-    amountToBeReturn %= availabelNotes[i];
+    amountToBeReturned =  amountToBeReturned % availabelNotes[i];
     noOfNotes[i].innerText = numberOfNotes;
 
     }

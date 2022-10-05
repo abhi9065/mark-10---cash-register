@@ -16,26 +16,34 @@
         </p>
       </div>
 
-      <label for="bill-amount">Bill Amount:
-        <input type="text" id="bill-amount">
-      </label>
+      <div id="format">
 
-      <label for="cash-given">Cash Given:
+<div>
+      <label class="label" for="bill-amount">Bill Amount:</label>
+        <input type="text" id="bill-amount">
+      
+      </div>
+
+      <div>
+      <label class="label" for="cash-given">Cash Given:</label>
         <input type="text" id="cash-given">
-      </label>
+      
+      </div>
+
+      </div>
       
       <button id="check-button">check</button>
 
       <p id="error-message"></p>
       
-      <table>
+      <table id="table">
 
-        <caption>
+        <caption class="table-caption">
             Return Change
         </caption>
 
-        <tr>
-          <th>no.of notes</th>
+        <tr class="table-raw">
+          <th class="table-head">no.of notes</th>
         <td class="no-of-notes"></td>
         <td class="no-of-notes"></td>
         <td class="no-of-notes"></td>
@@ -46,14 +54,14 @@
         </tr>
 
         <tr>
-          <th>Note</th>
-          <td>2000</td>
-          <td>500</td>
-          <td>100</td>
-          <td>20</td>
-          <td>10</td>
-          <td>5</td>
-          <td>1</td>
+          <th class="table-head">Note</th>
+          <td class="table-down">2000</td>
+          <td  class="table-down">500</td>
+          <td  class="table-down">100</td>
+          <td  class="table-down">20</td>
+          <td  class="table-down">10</td>
+          <td  class="table-down">5</td>
+          <td  class="table-down">1</td>
         </tr>
       </table>
 

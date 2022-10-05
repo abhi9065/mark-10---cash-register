@@ -1,7 +1,74 @@
-.containers{
 
-    display: flex;
-    flex-direction: column;
-    width: 50vw;
+
+body{
+    background-color: rgb(2, 84, 71) ;
+    text-align: center;
+    color: white;
+    display: block;
+
 }
 
+.description{
+
+    font-size: larger;
+}
+
+#format{
+   text-align: center;
+
+}
+
+.label{
+    display: block;
+    padding-top: 2rem;
+    margin-right:;
+    font-size: larger;
+    color:  rgb(150, 225, 215);
+    margin-bottom: 0.5rem;
+}
+
+#bill-amount{
+    width: 30%;
+    height: 4vh;
+   
+    
+}
+#check-button{
+    background-color:  rgb(150, 225, 215);
+    margin-top: 1rem;
+    padding: 0.5rem;
+}
+
+#table{
+
+    margin: auto;
+}
+
+.no-of-notes{
+
+    border: 1px solid black;
+    padding: 1rem;
+    /* background-color: white; */
+color: black;
+}
+.table-down{
+
+    border: 1px solid black;
+    padding: 0.5rem;
+    padding-top: 1rem;
+    margin-top: rem;
+    background-color: rgb(150, 225, 215);
+    color: rgb(2, 84, 71) ;
+}
+.table-head{
+    border: 1px solid black;
+    background-color: rgb(150, 225, 215);
+    color:  rgb(2, 84, 71);
+    
+}
+.table-caption{
+
+    padding-bottom: 0.5rem;
+    color:  rgb(150, 225, 215);
+    
+}

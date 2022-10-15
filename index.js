@@ -9,7 +9,7 @@ const availabelNotes = [2000, 500, 100, 20, 10, 5, 1];
 checkButton.addEventListener('click',function validateBillAndCashAmount(){
   hideMessage();
     if (billAmount.value > 0){
-        if (cashGiven.value > billAmount.value) {
+        if (cashGiven.value >= billAmount.value) {
            const amountToBeReturned = cashGiven.value - billAmount.value;
            calculateChange(amountToBeReturned);
         }else {
@@ -19,20 +19,36 @@ checkButton.addEventListener('click',function validateBillAndCashAmount(){
 
     }else{
        
-        showMessage("invalid bill Amount");    }
+        showMessage("invalid bill Amount");   
+     }
 });
 
 
 function calculateChange(amountToBeReturned){
 
-    for (i = 0; i < availabelNotes.length; i++){
+    for (let i = 0; i < availabelNotes.length; i++) {
     const numberOfNotes = Math.trunc(amountToBeReturned / availabelNotes[i]);
 
-    amountToBeReturned =  amountToBeReturned % availabelNotes[i];
+   amountToBeReturned = amountToBeReturned % availabelNotes[i];
     noOfNotes[i].innerText = numberOfNotes;
+    console.log(numberOfNotes)
 
     }
 }
+
+
+function calculateChange(amountToBeReturned) {
+
+    for (let i = 0; i < availabelNotes.length; i++) {
+      const numberOfNotes = Math.trunc(amountToBeReturned / availabelNotes[i]);
+  
+      amountToBeReturned = amountToBeReturned % availabelNotes[i];
+    
+      noOfNotes[i].innerText = numberOfNotes;
+    }
+  }
+
+
 
 function hideMessage(){
 
